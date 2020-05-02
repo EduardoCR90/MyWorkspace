@@ -16,7 +16,7 @@ module.exports = function(app) {
   //Acceso a usuarios registrados (todos roles)
   app.get("/api/test/user", [authJwt.verifyToken], controller.userBoard);
 
-  //Acceso a mods
+  //Acceso a mod
   app.get(
     "/api/test/mod",
     [authJwt.verifyToken, authJwt.isModerator],

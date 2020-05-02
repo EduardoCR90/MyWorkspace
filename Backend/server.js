@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");//necesario para crear un req.body
 const cors = require("cors");//incluido ya en express
 
-const app = express();
+const app = express(); 
 
 var corsOptions = {
   origin: "http://localhost:8081"
@@ -33,6 +33,7 @@ db.mongoose
     process.exit();
   });
  
+//CREO ROLES  
 function initial() {
   Role.estimatedDocumentCount((err, count) => {
     if (!err && count === 0) {
